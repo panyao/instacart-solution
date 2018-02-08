@@ -8,13 +8,15 @@ F1 score is used evaluate the prediction accuracy.
 ## Dataset
 The dataeset contains a sample of over 3 million grocery orders from more than 200,000 Instacart users. For each user, between 4 and 100 of their orders are provided.
 
+[Data Exploration Analysis Notebook](https://github.com/panyao/instacart-solution/blob/master/exploration/Data%20Exploratory%20for%20Instacart%20Market%20Basket%20Analysis.ipynb)
+
 ## Solution approach
 The problem was reformulated as a binary classification problem: given a user u, a product p, and the user's previous n orders, predict if the product will be reordered in user's n+1 order. 
 
 
 ### Feature engineering
 Exploratory data analysis has been performed to understand what features might be related to users' reorder behaviors.
-4 groups of features are used as input:
+4 groups of features are used as input, which include word embedding learned for product_id using word2vec.
 #### Product features
  - product_reorder_rate', 'product_reorder_probability', 
    'vec1', 'vec2', 'product_nb_users',  'product_mean_add_to_cart_position',
